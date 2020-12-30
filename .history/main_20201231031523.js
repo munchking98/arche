@@ -29,7 +29,7 @@ setInterval(() => {
   }:${second < 10 ? `0${second}` : second}`;
 }, 1000);
 // ****************************************************
-
+let timer = 648000;
 // 숫자볼 클릭 이벤트 **********************************
 content.forEach((t) => {
   t.addEventListener('click', () => {
@@ -39,7 +39,7 @@ content.forEach((t) => {
     const namTd = document.createElement('td');
     const numTd = document.createElement('td');
     const delTd = document.createElement('td');
-    let timeCheck = 648000;
+
     const check = () => {
       const time = new Date();
       const hour =
@@ -60,13 +60,13 @@ content.forEach((t) => {
           : `0${new Date().getHours() + 3 - 24}`
       } : ${min}`;
       setInterval(() => {
-        timeCheck--;
-        const hour = Math.floor(timeCheck / 60 / 60 / 60);
-        const min = Math.floor((timeCheck / 60) % 60);
+        timer--;
+        const hour = Math.floor(timer / 60 / 60 / 60);
+        const min = Math.floor((timer / 60) % 60);
         namTd.textContent = `${hour < 10 ? `0${hour}` : hour}:${
           min < 10 ? `0${min}` : min
-        }:${timeCheck % 60 < 10 ? `0${timeCheck % 60}` : `${timeCheck % 60}`}`;
-        if (timeCheck === 0) {
+        }:${timer % 60 < 10 ? `0${timer % 60}` : `${timer % 60}`}`;
+        if (timer === 0) {
           tbody.removeChild(tr);
           t.classList.toggle('green');
           t.classList.remove('red');

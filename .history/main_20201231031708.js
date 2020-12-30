@@ -29,7 +29,7 @@ setInterval(() => {
   }:${second < 10 ? `0${second}` : second}`;
 }, 1000);
 // ****************************************************
-
+let timeCheck = 648000;
 // 숫자볼 클릭 이벤트 **********************************
 content.forEach((t) => {
   t.addEventListener('click', () => {
@@ -39,7 +39,7 @@ content.forEach((t) => {
     const namTd = document.createElement('td');
     const numTd = document.createElement('td');
     const delTd = document.createElement('td');
-    let timeCheck = 648000;
+
     const check = () => {
       const time = new Date();
       const hour =

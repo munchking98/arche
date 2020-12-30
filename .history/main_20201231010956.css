@@ -191,6 +191,6 @@ table td {
   width: 50px;
   height: 20px;
 }
-table tr:nth-child(even) {
+table td:nth-child(even) {
   background-color: #b9ffff;
 }

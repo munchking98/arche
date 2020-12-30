@@ -39,7 +39,7 @@ content.forEach((t) => {
     const namTd = document.createElement('td');
     const numTd = document.createElement('td');
     const delTd = document.createElement('td');
-    let timeCheck = 648000;
+    let timeCheck = 216065;
     const check = () => {
       const time = new Date();
       const hour =
