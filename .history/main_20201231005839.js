@@ -106,6 +106,6 @@ del.addEventListener('click', () => {
       t.classList.remove('red');
     }
   });
-  de(tbody);
+  de(table);
 });
 // *************************************
