@@ -1,0 +1,71 @@
+.archeage {
+  position: relative;
+  width: 930px;
+  height: 530px;
+}
+.click {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  /* border: 1px solid red; */
+  background-color: blue;
+  color: white;
+  border-radius: 50%;
+  justify-content: center;
+}
+
+.one {
+  position: absolute;
+  right: 380px;
+  bottom: 120px;
+}
+.two {
+  position: absolute;
+  right: 380px;
+  bottom: 145px;
+}
+.three {
+  position: absolute;
+  right: 320px;
+  bottom: 135px;
+}
+.four {
+  position: absolute;
+  right: 295px;
+  bottom: 135px;
+}
+.five {
+  position: absolute;
+  right: 320px;
+  bottom: 175px;
+}
+.six {
+  position: absolute;
+  right: 295px;
+  bottom: 175px;
+}
+.seven {
+  position: absolute;
+  right: 320px;
+  top: 250px;
+}
+.eight {
+  position: absolute;
+  right: 295px;
+  top: 230px;
+}
+.nine {
+  position: absolute;
+  right: 320px;
+  top: 225px;
+}
+.ten {
+  position: absolute;
+  right: 300px;
+  top: 205px;
+}
+.eleven {
+  position: absolute;
+  right: 90px;
+  top: 155px;
+}

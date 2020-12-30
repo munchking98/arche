@@ -1,0 +1,9 @@
+.click {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  border: 1px solid red;
+  border-radius: 50%;
+  justify-content: center;
+  position: relative;
+}

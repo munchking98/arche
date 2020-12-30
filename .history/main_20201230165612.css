@@ -1,0 +1,19 @@
+.archeage {
+  position: relative;
+  width: 930px;
+  height: 530px;
+}
+.click {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  border: 1px solid red;
+  border-radius: 50%;
+  justify-content: center;
+}
+
+.one {
+  position: absolute;
+  right: 120px;
+  bottom: 50px;
+}
