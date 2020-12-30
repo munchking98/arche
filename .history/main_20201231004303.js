@@ -59,7 +59,7 @@ content.forEach((t) => {
           ? `0${new Date().getHours() + 3}`
           : `0${new Date().getHours() + 3 - 24}`
       } : ${min}`;
-      let timer = 216005;
+      let timer = 5;
       setInterval(() => {
         timer--;
         const hour = Math.floor(timer / 60 / 60 / 60);

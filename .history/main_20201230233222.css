@@ -158,17 +158,38 @@
   left: 350px;
   bottom: 135px;
 }
+.stat {
+  display: flex;
+  width: 2000px;
+}
+/* .cut {
+  border: 1px solid black;
+  width: 200px;
+  margin-right: 50px;
+  height: 300px;
+  overflow: scroll;
+}
+.gen {
+  border: 1px solid black;
+  width: 200px;
+  height: 300px;
+  overflow: scroll;
+} */
 
 .delete {
   margin-left: 10px;
   cursor: pointer;
-  width: 60px;
+  width: 40px;
   height: 20px;
   border: 1px solid black;
-  border-radius: 5px;
-  text-align: center;
 }
-
+/* .nam {
+  margin-left: 50px;
+  border: 1px solid black;
+  width: 200px;
+  height: 300px;
+  overflow: scroll;
+} */
 .time {
   position: absolute;
   font-size: 120px;
@@ -177,17 +198,7 @@
 }
 table {
   border: 1px solid black;
-  text-align: center;
 }
 table th {
   border: 1px solid black;
-  width: 80px;
-}
-table th:nth-child(4) {
-  width: 100px;
-}
-table td {
-  border: 1px solid black;
-  width: 50px;
-  height: 20px;
 }

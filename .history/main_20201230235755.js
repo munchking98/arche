@@ -39,40 +39,36 @@ content.forEach((t) => {
     const namTd = document.createElement('td');
     const numTd = document.createElement('td');
     const delTd = document.createElement('td');
-
+    const mapDelete = () => {
+      tbody.removeChild(tr);
+    };
     const check = () => {
       const time = new Date();
-      const hour =
-        time.getHours() < 10 ? `0${time.getHours()}` : time.getHours();
-      const min =
-        time.getMinutes() < 10 ? `0${time.getMinutes()}` : time.getMinutes();
+      const hour = time.getHours();
+      const min = time.getMinutes();
 
       numTd.textContent = t.textContent;
       delTd.textContent = 'X';
       delTd.addEventListener('click', () => {
         tbody.removeChild(tr);
-        t.classList.toggle('red');
       });
       cutTd.textContent = `${hour} : ${min} `;
       genTd.textContent = `${
-        new Date().getHours() + 3 <= 24
-          ? `0${new Date().getHours() + 3}`
-          : `0${new Date().getHours() + 3 - 24}`
-      } : ${min}`;
-      let timer = 216005;
+        hour + 3 <= 24 ? hour + 3 : hour + 3 - 24
+      } : ${min}  `;
+      let timer = 5;
       setInterval(() => {
         timer--;
         const hour = Math.floor(timer / 60 / 60 / 60);
         const min = Math.floor((timer / 60) % 60);
-        namTd.textContent = `${hour < 10 ? `0${hour}` : hour}:${
-          min < 10 ? `0${min}` : min
-        }:${timer % 60 < 10 ? `0${timer % 60}` : `${timer % 60}`}`;
+        namTd.textContent = `${hour}:${min}:${timer % 60}`;
         if (timer === 0) {
           tbody.removeChild(tr);
           t.classList.toggle('green');
           t.classList.remove('red');
         }
       }, 1000);
+
       tr.appendChild(numTd);
       tr.appendChild(cutTd);
       tr.appendChild(genTd);
@@ -82,6 +78,7 @@ content.forEach((t) => {
     };
     if (t.classList.contains('red')) {
       t.classList.toggle('red');
+      mapDelete();
     } else if (t.classList.contains('green')) {
       t.classList.remove('green');
       t.classList.toggle('red');

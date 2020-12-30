@@ -183,9 +183,6 @@ table th {
   border: 1px solid black;
   width: 80px;
 }
-table th:nth-child(4) {
-  width: 100px;
-}
 table td {
   border: 1px solid black;
   width: 50px;

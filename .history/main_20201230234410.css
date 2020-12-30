@@ -162,11 +162,9 @@
 .delete {
   margin-left: 10px;
   cursor: pointer;
-  width: 60px;
+  width: 40px;
   height: 20px;
   border: 1px solid black;
-  border-radius: 5px;
-  text-align: center;
 }
 
 .time {
@@ -177,17 +175,10 @@
 }
 table {
   border: 1px solid black;
-  text-align: center;
 }
 table th {
   border: 1px solid black;
-  width: 80px;
-}
-table th:nth-child(4) {
-  width: 100px;
 }
 table td {
   border: 1px solid black;
-  width: 50px;
-  height: 20px;
 }

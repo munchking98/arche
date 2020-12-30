@@ -27,167 +27,172 @@
   background-color: green;
 }
 
-.click:nth-child(1) {
+.one {
   position: absolute;
   right: 380px;
   bottom: 120px;
 }
-.click:nth-child(2) {
+.two {
   position: absolute;
   right: 380px;
   bottom: 145px;
 }
-.click:nth-child(3) {
+.three {
   position: absolute;
   right: 320px;
   bottom: 135px;
 }
-.click:nth-child(4) {
+.four {
   position: absolute;
   right: 295px;
   bottom: 135px;
 }
-.click:nth-child(5) {
+.five {
   position: absolute;
   right: 320px;
   bottom: 175px;
 }
-.click:nth-child(6) {
+.six {
   position: absolute;
   right: 295px;
   bottom: 175px;
 }
-.click:nth-child(7) {
+.seven {
   position: absolute;
   right: 320px;
   top: 250px;
 }
-.click:nth-child(8) {
+.eight {
   position: absolute;
   right: 295px;
   top: 230px;
 }
-.click:nth-child(9) {
+.nine {
   position: absolute;
   right: 320px;
   top: 225px;
 }
-.click:nth-child(10) {
+.ten {
   position: absolute;
   right: 300px;
   top: 205px;
 }
-.click:nth-child(11) {
+.eleven {
   position: absolute;
   right: 290px;
   top: 155px;
 }
-.click:nth-child(12) {
+.twelve {
   position: absolute;
   right: 295px;
   top: 135px;
 }
-.click:nth-child(13) {
+.thirteen {
   position: absolute;
   right: 320px;
   top: 155px;
 }
-.click:nth-child(14) {
+.fourteen {
   position: absolute;
   right: 320px;
   top: 135px;
 }
-.click:nth-child(15) {
+.fifteen {
   position: absolute;
   right: 300px;
   top: 105px;
 }
-.click:nth-child(16) {
+.sixteen {
   position: absolute;
   right: 300px;
   top: 80px;
 }
-.click:nth-child(17) {
+.seventeen {
   position: absolute;
   right: 330px;
   top: 80px;
 }
-.click:nth-child(18) {
+.eighteen {
   position: absolute;
   right: 330px;
   top: 105px;
 }
-.click:nth-child(19) {
+.nineteen {
   position: absolute;
   right: 370px;
   top: 155px;
 }
-.click:nth-child(20) {
+.twenty {
   position: absolute;
   right: 390px;
   top: 155px;
 }
-.click:nth-child(21) {
+.twenty-one {
   position: absolute;
   right: 370px;
   top: 125px;
 }
-.click:nth-child(22) {
+.twenty-two {
   position: absolute;
   right: 390px;
   top: 125px;
 }
-.click:nth-child(23) {
+.twenty-three {
   position: absolute;
   left: 350px;
   bottom: 160px;
 }
-.click:nth-child(24) {
+.twenty-four {
   position: absolute;
   left: 325px;
   bottom: 160px;
 }
 
-.click:nth-child(25) {
+.twenty-five {
   position: absolute;
   left: 325px;
   bottom: 135px;
 }
-.click:nth-child(26) {
+.twenty-six {
   position: absolute;
   left: 350px;
   bottom: 135px;
+}
+.stat {
+  display: flex;
+  width: 2000px;
+}
+.cut {
+  border: 1px solid black;
+  width: 200px;
+  margin-right: 50px;
+  height: 300px;
+  overflow: scroll;
+}
+.gen {
+  border: 1px solid black;
+  width: 200px;
+  height: 300px;
+  overflow: scroll;
 }
 
 .delete {
   margin-left: 10px;
   cursor: pointer;
-  width: 60px;
+  width: 40px;
   height: 20px;
   border: 1px solid black;
-  border-radius: 5px;
-  text-align: center;
 }
-
+.nam {
+  margin-left: 50px;
+  border: 1px solid black;
+  width: 200px;
+  height: 300px;
+  overflow: scroll;
+}
 .time {
   position: absolute;
   font-size: 120px;
   top: 50%;
   right: 50%;
-}
-table {
-  border: 1px solid black;
-  text-align: center;
-}
-table th {
-  border: 1px solid black;
-  width: 80px;
-}
-table th:nth-child(4) {
-  width: 100px;
-}
-table td {
-  border: 1px solid black;
-  width: 50px;
-  height: 20px;
 }

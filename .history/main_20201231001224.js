@@ -39,13 +39,13 @@ content.forEach((t) => {
     const namTd = document.createElement('td');
     const numTd = document.createElement('td');
     const delTd = document.createElement('td');
-
+    const mapDelete = () => {
+      tbody.removeChild(tr);
+    };
     const check = () => {
       const time = new Date();
-      const hour =
-        time.getHours() < 10 ? `0${time.getHours()}` : time.getHours();
-      const min =
-        time.getMinutes() < 10 ? `0${time.getMinutes()}` : time.getMinutes();
+      const hour = time.getHours();
+      const min = time.getMinutes();
 
       numTd.textContent = t.textContent;
       delTd.textContent = 'X';
@@ -54,12 +54,8 @@ content.forEach((t) => {
         t.classList.toggle('red');
       });
       cutTd.textContent = `${hour} : ${min} `;
-      genTd.textContent = `${
-        new Date().getHours() + 3 <= 24
-          ? `0${new Date().getHours() + 3}`
-          : `0${new Date().getHours() + 3 - 24}`
-      } : ${min}`;
-      let timer = 216005;
+      genTd.textContent = `${hour + 3 <= 24 ? hour + 3 : hour + 3 - 24 < 10 ? `0${}`:`${d}`} : ${min<10?`0${min}`:`${min}`}  `;
+      let timer = 5;
       setInterval(() => {
         timer--;
         const hour = Math.floor(timer / 60 / 60 / 60);
@@ -73,6 +69,7 @@ content.forEach((t) => {
           t.classList.remove('red');
         }
       }, 1000);
+
       tr.appendChild(numTd);
       tr.appendChild(cutTd);
       tr.appendChild(genTd);
@@ -82,6 +79,7 @@ content.forEach((t) => {
     };
     if (t.classList.contains('red')) {
       t.classList.toggle('red');
+      mapDelete();
     } else if (t.classList.contains('green')) {
       t.classList.remove('green');
       t.classList.toggle('red');
