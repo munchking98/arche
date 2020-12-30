@@ -45,9 +45,7 @@ content.forEach((t) => {
           cut.removeChild(cutDiv);
           gen.removeChild(genDiv);
           t.classList.toggle('green');
-          t.classList.remove('red');
         }
-        localStorage.setItem(nam);
       }, 1000);
 
       nam.appendChild(namDiv);
@@ -58,7 +56,6 @@ content.forEach((t) => {
       t.classList.toggle('red');
     } else if (t.classList.contains('green')) {
       t.classList.remove('green');
-      t.classList.toggle('red');
       check();
     } else {
       t.classList.toggle('red');

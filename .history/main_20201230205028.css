@@ -19,12 +19,8 @@
   justify-content: center;
   cursor: pointer;
 }
-
 .red {
   background-color: red;
-}
-.green {
-  background-color: green;
 }
 
 .one {
@@ -194,4 +190,7 @@
   font-size: 120px;
   top: 50%;
   right: 50%;
+}
+.yellow {
+  background-color: yellow;
 }

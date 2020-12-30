@@ -47,7 +47,6 @@ content.forEach((t) => {
           t.classList.toggle('green');
           t.classList.remove('red');
         }
-        localStorage.setItem(nam);
       }, 1000);
 
       nam.appendChild(namDiv);

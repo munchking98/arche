@@ -15,14 +15,18 @@ setInterval(() => {
     min < 10 ? `0${min}` : min
   }:${second < 10 ? `0${second}` : second}`;
 }, 1000);
-
 content.forEach((t) => {
   t.addEventListener('click', () => {
     const cutDiv = document.createElement('div');
     const genDiv = document.createElement('div');
     const namDiv = document.createElement('div');
-
-    const check = () => {
+    if (t.classList.contains('red')) {
+      t.classList.toggle('red');
+    } else if (t.classList.contains('green')) {
+      t.classList.remove('green');
+    } else {
+      t.classList.toggle('red');
+      t.classList.remove('green');
       const time = new Date();
       const mon = time.getMonth();
       const day = time.getDay();
@@ -45,25 +49,12 @@ content.forEach((t) => {
           cut.removeChild(cutDiv);
           gen.removeChild(genDiv);
           t.classList.toggle('green');
-          t.classList.remove('red');
         }
-        localStorage.setItem(nam);
       }, 1000);
 
       nam.appendChild(namDiv);
       cut.appendChild(cutDiv);
       gen.appendChild(genDiv);
-    };
-    if (t.classList.contains('red')) {
-      t.classList.toggle('red');
-    } else if (t.classList.contains('green')) {
-      t.classList.remove('green');
-      t.classList.toggle('red');
-      check();
-    } else {
-      t.classList.toggle('red');
-      t.classList.remove('green');
-      check();
     }
   });
 });

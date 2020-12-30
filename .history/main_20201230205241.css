@@ -19,12 +19,12 @@
   justify-content: center;
   cursor: pointer;
 }
+.yellow {
+  background-color: yellow;
+}
 
 .red {
   background-color: red;
-}
-.green {
-  background-color: green;
 }
 
 .one {
