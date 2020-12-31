@@ -63,7 +63,7 @@ content.forEach((t) => {
       let timeCheck = 10800;
       setInterval(() => {
         timeCheck -= 60;
-        const hour = Math.floor(timeCheck / 60 / 60);
+        const hour = Math.floor(timeCheck / 60 / 60 / 60);
         const min = Math.floor((timeCheck / 60) % 60);
         namTd.textContent = `${hour < 10 ? `0${hour}` : hour}:${
           min < 10 ? `0${min}` : min

@@ -182,7 +182,7 @@ table {
 table th {
   border: 1px solid black;
   width: 80px;
-  background-color: #cef6ec;
+  background-color: #b9ffff;
 }
 table th:nth-child(4) {
   width: 100px;
@@ -193,5 +193,5 @@ table td {
   height: 20px;
 }
 table tr:nth-child(even) {
-  background-color: #cef6ec;
+  background-color: #b9ffff;
 }
