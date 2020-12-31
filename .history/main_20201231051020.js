@@ -39,7 +39,7 @@ content.forEach((t) => {
     const namTd = document.createElement('td');
     const numTd = document.createElement('td');
     const delTd = document.createElement('td');
-
+    let timeCheck = 216065;
     const check = () => {
       const time = new Date();
       const hour =
@@ -56,24 +56,22 @@ content.forEach((t) => {
       cutTd.textContent = `${hour} : ${min} `;
       genTd.textContent = `${
         new Date().getHours() + 3 <= 24
-          ? `${new Date().getHours() + 3}`
+          ? `0${new Date().getHours() + 3}`
           : `0${new Date().getHours() + 3 - 24}`
       } : ${min}`;
-      namTd.textContent = '02:59';
-      let timeCheck = 10800;
       setInterval(() => {
-        timeCheck -= 60;
+        timeCheck--;
         const hour = Math.floor(timeCheck / 60 / 60 / 60);
         const min = Math.floor((timeCheck / 60) % 60);
         namTd.textContent = `${hour < 10 ? `0${hour}` : hour}:${
           min < 10 ? `0${min}` : min
-        }`;
+        }:${timeCheck % 60 < 10 ? `0${timeCheck % 60}` : `${timeCheck % 60}`}`;
         if (timeCheck === 0) {
           tbody.removeChild(tr);
           t.classList.toggle('green');
           t.classList.remove('red');
         }
-      }, 60000);
+      }, 1000);
       tr.appendChild(numTd);
       tr.appendChild(cutTd);
       tr.appendChild(genTd);

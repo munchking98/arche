@@ -56,13 +56,13 @@ content.forEach((t) => {
       cutTd.textContent = `${hour} : ${min} `;
       genTd.textContent = `${
         new Date().getHours() + 3 <= 24
-          ? `${new Date().getHours() + 3}`
+          ? `0${new Date().getHours() + 3}`
           : `0${new Date().getHours() + 3 - 24}`
       } : ${min}`;
-      namTd.textContent = '02:59';
-      let timeCheck = 10800;
+      namTd.textContent = '03:00';
+      let timeCheck = 648000;
       setInterval(() => {
-        timeCheck -= 60;
+        timeCheck--;
         const hour = Math.floor(timeCheck / 60 / 60 / 60);
         const min = Math.floor((timeCheck / 60) % 60);
         namTd.textContent = `${hour < 10 ? `0${hour}` : hour}:${
@@ -73,7 +73,7 @@ content.forEach((t) => {
           t.classList.toggle('green');
           t.classList.remove('red');
         }
-      }, 60000);
+      }, 1000);
       tr.appendChild(numTd);
       tr.appendChild(cutTd);
       tr.appendChild(genTd);

@@ -56,11 +56,11 @@ content.forEach((t) => {
       cutTd.textContent = `${hour} : ${min} `;
       genTd.textContent = `${
         new Date().getHours() + 3 <= 24
-          ? `${new Date().getHours() + 3}`
+          ? `0${new Date().getHours() + 3}`
           : `0${new Date().getHours() + 3 - 24}`
       } : ${min}`;
       namTd.textContent = '02:59';
-      let timeCheck = 10800;
+      let timeCheck = 648000;
       setInterval(() => {
         timeCheck -= 60;
         const hour = Math.floor(timeCheck / 60 / 60 / 60);
